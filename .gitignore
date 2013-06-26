@@ -1,0 +1,10 @@
+*.log
+*.pot
+*.pyc
+local\_settings.py
+*~
+media/
+cms_page_media/
+fab_settings.py
+.mysqldump_cnf
+*.sql

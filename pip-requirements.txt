@@ -1,0 +1,8 @@
+django==1.5.1
+django-extensions
+django-debug-toolbar
+South
+MySQL-python
+ipython==0.10
+fabric
+gunicorn
