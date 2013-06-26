@@ -1,24 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset='utf-8'></meta>
-<title>Inscripio</title>
-<link type="text/css" rel="stylesheet" href="site.css" />
-</head>
-<body>
-<header>
-<table>
-<tr>
-<td class='left'><h1>LOGO</h1></td>
-<td class='mid'><h1>
-    Inscripcio<br>
+{% load staticfiles %}
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset='utf-8'></meta> 
+<title>Inscripio</title> 
+<link rel="stylesheet" href="{% static "css/reset.css" %}"> 
+<link rel="stylesheet" href="{% static "css/text.css" %}"> 
+<link rel="stylesheet" href="{% static "css/960.css" %}"> 
+<link rel="stylesheet" href="{% static "css/style.css" %}">
+<style>
+.boilerplate{
+    align:right;
+    width:250px;
+    height:150px;
+}
+</style> 
+</head> 
+<body> 
+<header> 
+<div 
+class="container_12">
+        <div class="logoContainer">
+                <div class="grid_6 push_6">
+                        <a href="#">
+                        <img src="{% static "css/gfx/logo_min.png" alt="Logo" %}"/>
+                        </a>
+        </div>
+        </div>
+        </div>
+<h1>
+    Inscripio<br>
     <span class='curs'>
     Curs 2012-13</span>
 </h1>
-</td>
-<td class='left'><h1>Boilerplate</h1></td>
-</tr>
-</table>
+<div class='boilerplate'>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+mollit anim id est laborum.</p>
+</div>
 </header>
 <div>
 <p><strong>Normativa Interna</strong></p>
@@ -45,7 +67,6 @@
 <li>Tot usuari/a de l'AEIRaval es assegurat per l'entitat i se li garanteixen l$
 <li>L'assistencia ha de ser pactada a la inscripcio, amb un minim de tres ies a$
 </ul>
-</div>
 </div>
 </body>
 </html>

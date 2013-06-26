@@ -57,3 +57,25 @@ def analisi_inicial(request,qtype=None):
     extra_context['hipotest_de_la_situacio']='?'
     extra_context['orientacio_de_la_situacio']='?'
     return render_to_response('analisiinicial.html',extra_context)
+
+def inscripcio(request,qtype=None):
+    return render_to_response('inscripio.html',)
+
+
+def entrevista_inicial(request,qtype=None):
+    return render_to_response('entrevistainicial.html',)
+
+def pla_de_treball(request,qtype=None):
+    return render_to_response('pladetreball.html',)
+
+def derivacio(request,qtype=None):
+    return render_to_response('derivacioserveis.html',)
+
+def valoracio(request,qtype=None):
+    return render_to_response('valoracio.html',)
+
+def informe(request,qtype=None):
+    return render_to_response('informe.html',)
+
+def acord(request,qtype=None):
+    return render_to_response('acord.html',)
