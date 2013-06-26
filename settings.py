@@ -9,9 +9,6 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Martín Fuentes', 'fuentesmartin@gmail.com'),
-    ('Javi Fuentes', 'fuentesmartin@gmail.com'),
-    ('Javi Fuentes', 'jfuentess@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -68,7 +65,7 @@ STATICFILES_DIRS = (
 
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '0r6%7gip5tmez*vygfv+u14h@4lbt^8e2^26o#5_f_#b7%cm)u'
+SECRET_KEY = '0r6%7gip5tmez*vygfv+u14h@4lbt^8e2AAA^26o#5_f_#b7%cm)u'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
@@ -111,31 +108,8 @@ CMS_TEMPLATES = (
 
 # i18n and l10n
 CMS_HIDE_UNTRANSLATED = True
-LANGUAGES = (
-    ('es', gettext('Spanish')),
-    ('en', gettext('English')),
-)
 
 IMAGESTORE_SHOW_USER = False
-
-CMS_PLACEHOLDER_CONF = {
-    'new-image-1': {
-        'plugins': ['PicturePlugin'],
-        'name':gettext("New #1 Picture"),
-    },
-    'new-text-1': {
-        'plugins': ['TextPlugin', 'LinkPlugin'],
-        'name':gettext("New #1 Text"),
-    },
-    'new-image-2': {
-        'plugins': ['PicturePlugin'],
-        'name':gettext("New #2 Picture"),
-    },
-    'new-text-2': {
-        'plugins': ['TextPlugin', 'LinkPlugin'],
-        'name':gettext("New #2 Text"),
-    },
-}
 
 ROOT_URLCONF = 'urls'
 
@@ -147,26 +121,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.admin',
     'django.contrib.staticfiles',
-    'cms',
-    'menus',
-    'mptt',
     'south',
-    'cms.plugins.text',
-    'cms.plugins.picture',
-    'cms.plugins.link',
-    'cms.plugins.file',
-    'cms.plugins.snippet',
-    'cms.plugins.googlemap',
-    'sekizai',
-    'django_extensions',
-    'cmsplugin_embeddedpages',
-    'filer',
-    'cmsplugin_contact',
-    'imagestore',
-    'sorl.thumbnail',
-    'tagging',
-    'imagestore.imagestore_cms',
-	'simple_events'
+    'aeiraval_app'
 )
 
 LOGGING = {
