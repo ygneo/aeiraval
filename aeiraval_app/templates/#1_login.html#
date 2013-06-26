@@ -1,0 +1,35 @@
+{% load staticfiles %}o
+
+<link rel="stylesheet" href="{% static "css/reset.css" %}">
+<link rel="stylesheet" href="{% static "css/text.css" %}">
+<link rel="stylesheet" href="{% static "css/960.css" %}">
+<link rel="stylesheet" href="{% static "css/style.css" %}">
+
+<div class="container_12">
+	<div class="logoContainer">
+		<div class="grid_6 push_6">
+			<a href="#">
+			<img src="{% static "css/gfx/logo.png" alt="Logo" %}"/>
+			</a>
+        </div>
+        </div>
+        </div>
+
+
+<div class="grid_12">
+		<div class="loginContainer">
+			<form action="" method="POST">
+          {% csrf_token %}
+
+				<input name="user" type="text" class="grid_4" placeholder="Usuari" required="required"/>
+				<br>
+				<br>
+				<input name="password" type="password" class="grid_4" placeholder="Contrasenya" required="required"/>
+				<br>
+				<br>
+				<input type="submit" class="button" value="Login"/>
+			</form>
+		</div>
+	</div>
+	
+</div>

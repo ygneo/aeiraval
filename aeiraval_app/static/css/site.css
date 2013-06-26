@@ -1,0 +1,53 @@
+header {
+  width:100%;
+  height:150px;
+}
+.block1{
+  border: solid black 1px;
+  width:250px;
+  display:block-inline;
+}
+.right {
+  width:250px;
+  text-align:right;
+  display:block-inline;
+}
+.mid{
+  width:400px;
+  text-align:center;
+  display:block-inline;
+}
+.left{
+  width:250px;
+  text-align:left;
+  display:block-inline;
+}
+.curs{
+  background-color:grey;
+  color:white;
+  text-align:center;
+}
+.spacer{
+  width:50px;
+}
+.border1{
+  border:solid black 2px;
+}
+.leftpair{
+  width:400px;
+  text-align:center;
+  font-weight:strong;
+}
+.rightpair{
+  width:400px;
+  text-align:center;
+  font-weight:strong;
+}
+.lefttext{
+  width:400px;
+  height:200px;
+}
+.righttext{
+  width:400px;
+  height:200px;
+}

@@ -1,0 +1,31 @@
+
+#contenidor {
+	overflow: hidden;
+	position: absolute;
+	height: 300px;
+	width: 960px;
+	left: 50%;
+	top: 50%;
+	margin-top: -150px;
+	margin-left: -480px;
+}
+
+.button-box1{
+	clear:both;
+	float: left;
+    height: auto;
+    margin: 10px;
+    padding: 0;
+    width: 400px;
+
+}
+
+.button-box2{
+	float: left;
+    height: auto;
+    margin: 10px;    
+    padding: 0;
+    width: 400px;
+}
+
+

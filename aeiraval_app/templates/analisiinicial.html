@@ -1,0 +1,188 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'></meta>
+<title>Analisi Inicial</title>
+<link rel="stylesheet" href="{% static "css/reset.css" %}">
+<link rel="stylesheet" href="{% static "css/text.css" %}">
+<link rel="stylesheet" href="{% static "css/960.css" %}">
+<link rel="stylesheet" href="{% static "css/style.css" %}">
+<link rel="stylesheet" href="{% static "css/site.css" %}">
+</head>
+<body>
+<header>
+  <div align="left">
+    <img src="{% static "css/gfx/logo_min.png" alt="Logo" %}" style="position: absolute; top: 5; left: 6"/>
+  </div>
+  <div align="center">
+    <h1>
+      Analisi Inicial<br>
+      <span class='curs'>
+    Curs 2012-13</span>
+     </h1>
+  </div>
+  <div align="right">
+    <span style='text-align:center'>Nom i cognoms del/la menor</span><br></span>
+    <p>&nbsp;</p>
+    <span style='text-align:left'>Data</span>
+  </div>
+</header>
+<section>
+<table>
+<tr>
+<td>{{ nou_usuari }}</td><td>{{ antic_usuari }}</td>
+<td>{{ grup_anterior }}</td><td>{{ referent_anterior }}</td>
+</tr>
+<tr>
+<td><strong>Nou usuari</strong></td>
+<td><strong>Antic usuari</strong></td>
+<td><em>Grup anterior</em></td>
+<td><em>Referent anterior</em></td>
+</tr>
+</table>
+<p><strong>Antiguitat a l'entitat</strong><span style='width:100px'></span>
+{{ antiguitat_a_lentitat }}</p>
+<p><strong>Ha estat usuari d'alguna altra entitat?</strong>
+<span style='width:50px'></span>{{ altra_entitat }}</p>
+</section>
+<section class = 'border1'>
+<p><strong>Agent derivant</strong><span class='spacer'></span>
+{{ agent_derivant }}
+<span class='spacer'></span><strong>Servei i professional</strong>
+<span class='spacer'></span>{{ servei_i_professional }}<span class='spacer'></span><strong>Data</strong></span><span class='spacer'></span>
+{{ servei_i_professional_data }}</p>
+<p><strong>Motius de la derivacio</strong><span class='spacer'></span>
+{{ motius_de_la_derivacio }}</p>
+<p><strong>Pla de treball proposat</strong><span class='spacer'></span>
+{{ pla_de_treball_proposat }}</p>
+</section>
+<h2>Analisi del context individual</h2>
+<section class='border1'>
+<table>
+<tr>
+<td class='leftpair'>Possibilitats del/la menor</td>
+<td class='rightpair'>Limitations del/la menor</td>
+</tr>
+<tr>
+<td class='lefttext'>{{ possibilitats }}</td>
+<td class='righttext'>{{ limitations }}</td>
+</tr>
+</table>
+</section>
+<section class='txtblock border1' style='padding:20px'>
+<div class='right'><strong>Valoracio funcional<br>del/la menor</strong><br>
+(estudis, conducta, dinamica, relational,...)</div>
+<div class='righttext'>
+{{ valoracio_funcional }}</div>
+</section>
+<section>
+<form name='Factors de risc'>
+<div align='center'>
+<input type='checkbox' name='option1' value='disminucio_fisica'>
+Disminucio fisica, psiquica i sensorial<br>
+<input type='checkbox' name='option2' value='problemes_de_salut'>
+Problemes de salut<br>
+<input type='checkbox' name='option3' value='problemes_de_comportement'>
+Problemes de comporatament<br>
+<input type='checkbox' name='option4' value='dificultats_daprenentage'>
+Dificultats d'aprenentatge<br>
+<input type='checkbox' name='option5' value='itinerari_escolar_irregular'>
+Itinerari escolar irregular<br>
+<input type='checkbox' name='option6' value='passa_moltes_hores_sol'>
+Passa moltes hores sol/a al carrer o a casa<br>
+<input type='checkbox' name='option7' value='comportaments_antisocials'>
+Comportaments antisocials<br>
+<input type='checkbox' name='option8' value='problemes_amb_la_justice'>
+Problemes amb la justicia<br>
+<input type='checkbox' name='option9' value='sospita_de_consum_de_toxics'>
+Sospita de consum de toxics<br>
+<input type='checkbox' name='option10' 
+value='comportament_vers_la_sexualitat_anomal'>
+Comportament vers la sexualite anomal<br>
+<input type='checkbox' name='option11' value='no_te_horaris_ni_limits'>
+No te horaris ni limits<br>
+<input type='text' name = option12 value='Altres'>Altres<br>
+</div>
+</form>
+</section>
+<section class='biggy'>
+<div class='block2'>
+<p><strong>Analisi del context familiar</strong></p>
+<table>
+<tr>
+<td><strong>Nom</strong></td>
+<td><strong>Roll</strong></td>
+</tr>
+<tr>
+<td>{{ nom }}</td>
+<td>{{ roll }}</td>
+</tr>
+</table>
+</div>
+<div class='block3'>
+<p><strong>Mapa de relacions familiars</stron> (segons el genograma)</p>
+<p>{{ mapa_de_relations_familiars }}</p>
+</div>
+<div class='block4'>
+<span style='background-color:grey;color:white;width:100%;height:100px'>
+something&nbsp;&nbsp;something else
+</span>
+</div>
+<div class='block5'>
+<form name='indicators_de_risc_familiar'>
+<input type='checkbox' option='option1' 
+                       name='nombre_de_fills'
+                       value='nombre_de_fills'>
+Nombre de fills/es</br>
+<input type='checkbox' option='option2' name='viu_amb_altres_familiars_a_casa'
+value='viu_amb_altres_familiars_a_casa'>
+Viu amb altres familiars a casa</br>
+<input type='checkbox' option='option3' name='drogodependencia_dalgun_familiar'
+value='drogodependencia_dalgun_familiar'>
+Drogodependencia d'algun familiar</br>
+<input type='checkbox' option='option4' name='familiars_amb_problems_de_salut'
+value='familiars_amb_problems_de_salut'>
+Familiars amb problemes de salut</br>
+<input type='checkbox' option='option5' 
+name='dificultats_dinsercio_laboral_dels_pares'
+value='dificultats_dinsercio_laboral_dels_pares'>
+Dificultats d'insercio laboral dels pares</br>
+<input type='checkbox' option='option6' name='dificultats_economiques'
+value='dificultats_economiques'>
+Dificultats economiques<br>
+<input type='checkbox' option='option7' name='problemes_amb_la_justicia'
+value='problemes_amb_la_justicia'>
+Problemes amb la justicia</br>
+<input type='checkbox' option='option8' 
+name='model_de_vida_inadequada_pels_menors'
+value='model_de_vida_inadequada_pels_menors'>
+Model de vida inadequada pels menors</br>
+<input type='checkbox' option='option9' 
+name='procedencia_dubtosa_dels_ingressos'
+value='procedencia_dubtosa_desl_ingressos'>
+Procedencia dubtosa dels ingressos</br>
+<input type='checkbox' option='option10' name='sospita_de_maltractment'
+value='sospita_de_maltractment'>
+Sospita de maltractment</br>
+<input type='text' name='Altres' value='Altres'>Altres<br>
+</form>
+</div>
+</section>
+<p><strong>Analisi del context social</stron></p>
+<section class='block6'>
+<p>Sociograma (Subratliar les relations de risc)</p>
+<p> {{sociograma }}</p>
+</section>
+<p><strong>Recursos als que assisteix</strong></p>
+<section class='block7'>
+<p><strong>Hipotesi de la situacio</strong></p>
+<p>{{ hipotest_de_la_situacio }}</p>
+</section>
+<section class='block8'>
+<p><strong>Orientacio de la intervencio</strong></p>
+<p>{{ orientacio_de_la_intervencio }}</p>
+</section>
+</body>
+</html>

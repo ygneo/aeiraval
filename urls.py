@@ -7,7 +7,11 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^test/', 'aeiraval_app.views.test'),
+    url(r'^$', 'aeiraval_app.views.login_page'),
+    url(r'^buttons/', 'aeiraval_app.views.buttons'),
+    url(r'^fitxes/', 'aeiraval_app.views.fitxes'),
+    url(r'^analisi/', 'aeiraval_app.views.analisi_inicial'),
+#    url(r'^logout/$', 'aeiraval_app.views.logout'),
 )
 
 if settings.DEBUG:
