@@ -5,40 +5,71 @@ General styles
 ******/
 
 body{
-	background-color: lightblue;
+	background: url("gfx/bg.png") repeat;
+}
+
+.contentContainer{
+	background: #fff;
+	padding: 15px;
+}
+
+.contentHeaderContainer{
+	background-color: #0065a4;
+	padding: 20px;
+}
+
+.contentHeaderContainer h1,
+.contentHeaderContainer p{
+	margin-bottom: 0;
+	color: #fff;
+}
+
+/*Button Styles*/
+
+.button.small{
+	width: 100px;
+	padding: 10px 20px;
+	font-size: 20px;
+}
+
+.button.large{
+	width:300px;
+	padding: 20px 40px; 
+	font-size: 24px; 
+	
 }
 
 .button { 
-	width:300px;
 	margin:5px;
-	margin-right: center;
-	margin-left:center;
 	border-top: 1px solid #96d1f8; 
 	background: #65a9d7; 
 	background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7)); 
 	background: -moz-linear-gradient(top, #3e779d, #65a9d7); 
-	padding: 20px 40px; 
 	-webkit-border-radius: 20px; 
 	-moz-border-radius: 20px; 
 	border-radius: 20px; 
 	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0; 
 	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0; 
 	box-shadow: rgba(0,0,0,1) 0 1px 0; 
-	text-shadow: rgba(0,0,0,.4) 0 1px 0; color: white; 
-	font-size: 24px; 
+	text-shadow: rgba(0,0,0,.4) 0 1px 0; 
 	font-family: 'cafetaregular', Helvetica, Arial, Sans-Serif; 
-	text-decoration: none; 
 	vertical-align: middle; 
 	display: inline-block;
 	cursor: pointer;
-
+	color: #fff;
 } 
+
+.button{
+	text-decoration: none; 
+	color: white; 
+}
 
 .button:hover { 
 	border-top-color: #28597a; 
 	background: #28597a; 
 	color: #ccc; 
 } 
+
 
 .button:active { 
 	border-top-color: #1b435e; 
@@ -60,25 +91,59 @@ body{
 }
 
 .addButton{
-	width: 100%;
+	width: 200px;
+	font-size: 20px;
+	border-radius: 0;
+	margin: 0 0 5px 0;
+	padding: 10px;
 }
 
 .rightColumn .callToActionButton{
 	float: right;
 }
 
+/*ButtonsEND*/
+
 ol li,
 ul li{
 	line-height: 32px;
+	list-style-type: none;
+	margin-left: 0px;
+	text-transform: uppercase;
+	font-size: 25px;
+	font-family: 'cafetaregular', "Helvetica";
+	
+}
+
+ol li a,
+ul li a{
+	color: #0065a4;
+	text-decoration: none;
+}
+
+ol li:hover a,
+ul li:hover a{
+	color: #000;
 }
 
 .pageHeader{
 	text-align: center;
 }
 
+/*
+Tables
+*/
+
 table td{
 	border: 1px solid #000;
 	text-align: center;
+}
+
+table tr td input[type="text"]{
+	text-align: center;
+	border: none;
+	height: 100%;
+	width: 100%;
 }
 
 table .titleRow td{
@@ -97,7 +162,13 @@ table .tableItem td{
 	border: none;
 }
 
-table .tableItem:nth-child(even){
+table tr td:first-child{
+	font-weight: bold;
+	padding: 5px 5px;
+}
+
+table .tableItem:nth-child(even),
+table .tableItem:nth-child(even) input[type="text"]{
 	background-color: #ccc;
 }
 
@@ -108,15 +179,13 @@ Login
 
 .logoContainer{
 	margin-top: 40px;
+	text-align: center;
 }
 
 .loginContainer{
 	height: 400px;
 	text-align: center;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: -100px 0 0 -250px;
+	
 }
 
 .loginContainer input{
@@ -125,25 +194,36 @@ Login
 	font-size: 16px;
 }
 
-.loginContainer .button{
-	height: 35px;
-	padding: 0;
-	font-size: 16px;
-	width: 150px;
+.loginContainer form{
+	display: inline-block;
+	text-align: center;
 }
 
-.loginContainer .button a{
-	text-decoration: none;
-	color: #fff;
+/******
+MainMenu
+*******/
+
+#mainMenuContainer{
+	width: 960px;
+	position: absolute;
+	top: 20%;
 }
+
 
 /****
-ListOfFamilies
+ListOfFamilies / Expedients
 ***/
 
-.listOfFamilies .leftColumn input{
-	margin-bottom: 50px;
-	width: 220px;
+.searchContainer{
+	background-color: #0065a4;
+	text-align: right;
+	padding: 20px;
+}
+
+.searchContainer input{
+	width: 320px;
+	height: 30px;
+	font-size: 25px;
 }
 
 
@@ -152,4 +232,32 @@ ListOfFamilies
 }
 #container_dre{
 	float:right;
+}
+
+#formulari {
+display:block;
+}
+
+.text_formulari {
+float:left;
+display:block;
+font-size:15px;
+line-height:1.23em;
+width:81px;
+color: #0065a4;
+font-family: 'cafetaregular', Helvetica, Arial, Sans-Serif; 
+padding-top:3px;
+}
+
+#formulari input {
+width: 350px;
+font-size: 13px;
+line-height: 1.23em;
+color: #262626;
+padding: 6px 10px;
+margin: 0;
+margin-left: 10px;
+font-family:Arial, Helvetica, sans-serif;
+border: 1px solid #d9d9d9;
+background: #fcfcfc;
 }

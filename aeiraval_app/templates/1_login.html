@@ -5,31 +5,29 @@
 <link rel="stylesheet" href="{% static "css/960.css" %}">
 <link rel="stylesheet" href="{% static "css/style.css" %}">
 
+
 <div class="container_12">
+	
 	<div class="logoContainer">
-		<div class="grid_6 push_6">
-			<a href="#">
+		<div class="grid_12">
 			<img src="{% static "css/gfx/logo.png" alt="Logo" %}"/>
-			</a>
-        </div>
-        </div>
-        </div>
-
-
-<div class="grid_12">
+		</div>
+	</div>
+		
+	
+	
+	<div class="grid_12">
 		<div class="loginContainer">
-			<form action="" method="POST">
-          {% csrf_token %}
-
+			<h1>Sistema de Registre Integral</h1>
+			<form action="" method="post">
+				 {% csrf_token %}
 				<input name="user" type="text" class="grid_4" placeholder="Usuari" required="required"/>
 				<br>
 				<br>
 				<input name="password" type="password" class="grid_4" placeholder="Contrasenya" required="required"/>
 				<br>
 				<br>
-				<input type="submit" class="button" value="Login"/>
+				<button value="Login" class="button small" type="submit">Login</button>
 			</form>
 		</div>
 	</div>
-	
-</div>
