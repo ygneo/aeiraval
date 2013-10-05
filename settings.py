@@ -99,6 +99,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.staticfiles',
     'south',
+    'django_extensions',
     'aeiraval_app'
 )
 
@@ -154,6 +155,3 @@ try:
     from local_settings import *
 except ImportError:
     pass
-
-
-
